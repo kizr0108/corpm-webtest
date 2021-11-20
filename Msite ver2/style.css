@@ -170,15 +170,6 @@ h4 {
     line-height: 1.6em;
     font-weight: normal;
   }
-  .br__sp {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 960px) and (max-width: 960px) {
-  .br__sp {
-    display: inline;
-  }
 }
 
 /*---------- header ----------*/
@@ -405,7 +396,7 @@ h4 {
 .area-top__title h2 {
   color: var(--title-color);
   text-align: center;
-  font-size: 6.0rem;
+  font-size: 4.8rem;
   line-height: 1.3em;
 }
 
@@ -414,6 +405,37 @@ h4 {
   text-align: center;
   font-size: 2.4rem;
   line-height: 1.6em;
+}
+
+@media screen and (max-width: 960px) {
+  .area-top--sm {
+    height: 400px;
+  }
+  .area-top--sm .area-top__title {
+    height: 400px;
+  }
+  .area-top__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .area-top__title h2 {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 3.2rem;
+    line-height: 1.3em;
+  }
+  .area-top__title p {
+    margin-top: 2.0rem;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 1.6em;
+  }
 }
 
 .top-news {
@@ -617,7 +639,7 @@ h4 {
   .area-panel__textarea {
     width: 100%;
     height: auto;
-    padding: 60px;
+    padding: 20px;
     position: relative;
   }
   .area-panel__textarea h3 span {
@@ -653,7 +675,7 @@ h4 {
     background: url("img/susumu_mori_square.jpg");
     background-size: cover;
     background-position: center center;
-    margin: 0 60px 40px 60px;
+    margin: 0 20px 40px 20px;
     height: auto;
   }
   .area-panel__imgarea--aboutus::before {
@@ -667,7 +689,7 @@ h4 {
     background: url("img/company.jpg");
     background-size: cover;
     background-position: center center;
-    margin: 0 60px 40px 60px;
+    margin: 0 20px 40px 20px;
     height: auto;
   }
   .area-panel__imgarea--service::before {
