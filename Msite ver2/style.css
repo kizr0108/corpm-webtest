@@ -528,12 +528,27 @@ h4 {
 }
 
 @media screen and (max-width: 960px) {
+  .area-about {
+    padding-top: 120px;
+  }
+  .area-about__title {
+    font-size: 3.2rem;
+    line-height: 1.3em;
+    color: var(--title-color);
+    font-weight: bold;
+  }
+  .area-about__text {
+    margin-top: 32px;
+  }
   .area-about__2col {
     display: block;
   }
   .area-about__2col--left, .area-about__2col--right {
     display: block;
     width: 100%;
+  }
+  .area-about__2col--left p, .area-about__2col--right p {
+    font-size: 1.8rem;
   }
 }
 
