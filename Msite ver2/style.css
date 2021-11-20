@@ -414,6 +414,7 @@ h4 {
   }
   .area-top--lg .area-top__title {
     min-height: 40vh;
+    height: auto;
   }
   .area-top--sm {
     height: 400px;
