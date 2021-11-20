@@ -121,6 +121,66 @@ h4 {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .btn {
+    margin: 2.0rem 0;
+    display: block;
+    min-height: 48px;
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    padding: 16px 4.0rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: var(--main-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 960px) and (max-width: 960px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6em;
+  }
+  p:not(:first-of-type) {
+    margin-top: 2.0rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+    line-height: 1.3em;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 2.2rem;
+    line-height: 1.4em;
+    color: var(--title-color);
+    font-weight: normal;
+    font-family: "Century Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", 'Yu Gothic', 'YuGothic', Meiryo, sans-serif;
+  }
+  h4 {
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    font-weight: normal;
+  }
+  .br__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) and (max-width: 960px) {
+  .br__sp {
+    display: inline;
+  }
+}
+
 /*---------- header ----------*/
 .header {
   display: block;
