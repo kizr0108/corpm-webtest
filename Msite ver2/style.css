@@ -410,6 +410,7 @@ h4 {
 @media screen and (max-width: 960px) {
   .area-top--lg {
     height: auto;
+    padding-bottom: 1px;
   }
   .area-top--lg .area-top__title {
     min-height: 60vh;
@@ -1161,7 +1162,7 @@ h4 {
   }
   .article__block {
     margin-top: 60px;
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   .article__block--white {
     margin-top: 60px;
