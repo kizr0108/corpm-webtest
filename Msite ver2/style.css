@@ -408,6 +408,12 @@ h4 {
 }
 
 @media screen and (max-width: 960px) {
+  .area-top--lg {
+    height: auto;
+  }
+  .area-top--lg .area-top__title {
+    min-height: 60vh;
+  }
   .area-top--sm {
     height: 400px;
   }
@@ -583,7 +589,7 @@ h4 {
 
 @media screen and (max-width: 960px) {
   .area-about {
-    padding-top: 120px;
+    padding-top: 40px;
   }
   .area-about__title {
     font-size: 3.2rem;
