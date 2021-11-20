@@ -413,7 +413,7 @@ h4 {
     padding-bottom: 1px;
   }
   .area-top--lg .area-top__title {
-    min-height: 40vh;
+    min-height: 50vh;
     height: auto;
   }
   .area-top--sm {
@@ -531,11 +531,12 @@ h4 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 3px 12px;
+    padding: 2px 8px;
     background: var(--base-color);
   }
   .top-news__title {
-    margin-top: 1.0rem;
+    margin-top: 0;
+    padding: 10px 0;
     width: 100%;
     font-size: 1.6rem;
   }
