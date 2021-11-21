@@ -1,0 +1,313 @@
+@media screen and (min-width:560px) {
+
+    html,
+    body {
+        min-width: 1200px;
+    }
+
+
+    .br-pc {
+        display: inline;
+    }
+
+    .br-sp {
+        display: none;
+    }
+
+
+    /*---------------------------------------------------------
+        ヘッダー
+---------------------------------------------------------*/
+
+    .hamburger_menu {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:560px) {
+
+    html,
+    body {
+        width: 100%;
+    }
+
+
+    .br-pc {
+        display: none;
+    }
+
+    .br-sp {
+        display: inline;
+    }
+
+
+    .wrapper {
+        margin: 0 16px;
+        width: calc(100% - 32px);
+    }
+
+    .wrapper-wide {
+        padding-right: 20px;
+    }
+
+    [class^="btn"] {
+        width: 100% !important;
+    }
+
+
+    /*---------------------------------------------------------
+        ヘッダー
+---------------------------------------------------------*/
+
+    /* ----- HAMBURGER -----*/
+    .hamburger-menu {}
+
+    .hamburger {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 2px;
+        background-color: #000;
+        position: absolute;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .hamburger span::before {
+        bottom: 8px;
+    }
+
+    .hamburger span::after {
+        top: 8px;
+    }
+
+
+    #checkbox-hamburger:checked ~ .hamburger span {
+        background: rgba(255, 255, 255, 0);
+        /*メニューオープン時は真ん中の線を透明にする*/
+    }
+
+    #checkbox-hamburger:checked ~ .hamburger span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #checkbox-hamburger:checked ~ .hamburger span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .box-nav-header {
+        display: none;
+    }
+
+    .box-nav-header.is_open {
+        display: block;
+        position: fixed;
+        top: var(--height-header);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        border-top: 1px solid #eee;
+    }
+
+    .nav_header,
+    .nav-header ul {
+        display: block;
+    }
+
+    .nav-header ul *:is(li, a, dl) {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-header ul dl {
+        padding: 16px;
+    }
+
+    .CTA-header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    /*---------------------------------------------------------
+        メイン
+---------------------------------------------------------*/
+
+    .area-demand,
+    .area-about {
+        padding-top: 40px;
+    }
+
+    .area-contact {
+        padding: 40px 0;
+    }
+
+    .area-contact .wrapper {
+        margin: 40px auto;
+    }
+
+    .title-eng {
+        font-size: 2.4rem;
+    }
+
+    .title-text {
+        font-size: 1.8rem;
+    }
+
+    .flex-2col-pc {
+        display: block;
+        width: 100%;
+    }
+
+    .flex-2col-pc > * {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .flex-2col-pc .l-60,
+    .flex-2col-pc .r-40 {
+        width: 100%;
+    }
+
+
+    /* ----- TOP VIEW -----*/
+    .area-top-view {
+        margin-top: var(--height-header);
+        height: 500px;
+        background-position: center center;
+    }
+
+    .title-top-view {
+        font-size: 2.6rem;
+    }
+
+    .subtitle-top-view {
+        font-size: 2.4rem;
+    }
+
+    .subtitle-top-view span {
+        font-size: 2.0rem;
+    }
+
+    /* ----- DEMAND ----- */
+    .area-demand .flex-2col-pc > div {
+        margin: 40px 0;
+    }
+
+    /* ----- ABOUT ----- */
+    .logo-m-vision {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .img-about {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .title-about {
+        text-align: center;
+    }
+
+    .link-detail-about {
+        position: relative;
+    }
+
+    .slider-displayarea {
+        width: 100%;
+    }
+
+    [class^="arrow-slider"] {
+        background: rgba(0, 0, 0, .2);
+    }
+
+    .arrow-slider-previous {
+        border-right: 1px solid #666;
+    }
+
+    .arrow-slider-next {
+        border-left: 1px solid #666;
+    }
+
+    [class^="arrow-slider"]::before {
+        color: #000;
+    }
+
+    .close-slider::before,
+    .close-slider::after {
+        background: #000;
+    }
+
+    /* ----- FEATURE ----- */
+    .wrapper.area-feature {
+        margin: -40px auto;
+    }
+
+    .img-feature {
+        width: 100%;
+        height: auto;
+    }
+
+    [class^="box-feature"] {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0;
+        border: none;
+    }
+
+    [class^='subttl-feature'] {
+        font-size: 1.6rem;
+    }
+
+    .subttl-feature-wide {
+        width: auto;
+        text-align: left;
+        margin: 11px 0 21px 25px;
+    }
+
+    /* ----- REPORT ----- */
+
+    .imgarea-report-pc {
+        display: none;
+    }
+
+    .imgarea-report-sp {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .imgarea-report-sp::before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 65%;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-companyname > div {
+        position:relative;
+        width:100%;
+        transform:none;
+        text-align:center;
+    }
+}

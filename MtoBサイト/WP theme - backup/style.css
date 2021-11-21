@@ -1,0 +1,556 @@
+@charset "UTF-8";
+/*
+Theme Name: MtoB theme for corp.M
+Author: Kazuki Ito
+Version: 1.0
+*/
+
+
+:root {
+    --main-color: #17BAFF;
+    --base-color: #FFF;
+    --accent-color: #FFB34E;
+    --height-header: 80px;
+    counter-reset: subttlnum;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Yu Gothic', sans-serif;
+    font-size: 1.6rem;
+    line-height: 3.0rem;
+    font-weight: 300;
+}
+
+.underline {
+    text-decoration: solid underline var(--main-color);
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+main {
+    width: 100%;
+}
+
+.white,
+.white * {
+    color: #fff !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.br-pc {
+    display: inline;
+}
+
+.br_sp {
+    display: none;
+}
+
+
+.wrapper-wide {
+    margin: 0 auto;
+    padding-left: 16px;
+    max-width: 1440px;
+}
+
+.wrapper {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.btn-CTA {
+    display: block;
+    width: 480px;
+    height: 80px;
+    line-height: 80px;
+    background: var(--accent-color);
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: rgba(255, 179, 79, .8) 0 0 30px;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2.0rem;
+}
+
+.btn-wide {
+    display: block;
+    line-height: 2.0rem;
+    padding: 30px;
+    background: var(--main-color);
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.0rem;
+
+    width: 100%;
+}
+
+
+/*---------------------------------------------------------
+        ヘッダー 
+---------------------------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--height-header);
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, .3) 0 0 16px;
+    z-index: 9999;
+}
+
+.header > .wrapper-wide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    display: block;
+    text-indent: -9999px;
+    background: url(img/M-Vision-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(var(--height-header) - 20px);
+    width: 275px;
+    margin: 10px 0;
+}
+
+.box-nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header ul li,
+.nav-header ul li * {
+    display: block;
+    text-align: center;
+}
+
+.linktext-nav-header {
+    padding: 0 10px;
+}
+
+.linktext-nav-header dt {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    font-family: "Bahnschrift";
+    font-weight: bold;
+}
+
+.linktext-nav-header dd {
+    font-size: 12px;
+    line-height: 12px;
+    color: #555;
+}
+
+.CTA-header {
+    height: var(--height-header);
+    line-height: var(--height-header);
+    display: block;
+    font-size: 20px;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0 16px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+/* ----- HAMBURGER ----- */
+.hamburger-menu > input {
+    display: none;
+}
+
+
+
+/*---------------------------------------------------------
+        メイン 
+---------------------------------------------------------*/
+
+
+.title-eng {
+    display: block;
+    font-family: "Bahnschrift";
+    font-size: 3.2rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+.title-text {
+    display: block;
+    text-align: center;
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    margin-bottom: 2em;
+}
+
+.flex-2col-pc {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.flex-2col-pc > * {
+    width: calc(50% - 20px);
+}
+
+.flex-2col-pc > .l-60 {
+    width: calc(60% - 20px);
+}
+
+.flex-2col-pc > .r-40 {
+    width: calc(40% - 20px);
+}
+
+.text-normal {
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    color: #000;
+}
+
+.text-reference {
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    color: #555;
+    text-align: left;
+
+}
+
+.text-dot {
+    color: var(--main-color);
+    padding-top: 0.2em;
+    background-position: top left -2px;
+    background-repeat: repeat-x;
+    background-size: 1em 0.2em;
+    background-image: radial-gradient(.1em .1em at center center, var(--main-color), var(--main-color) 100%, transparent);
+    font-weight: normal;
+}
+
+/* ----- トップビュー ----- */
+.area-top-view {
+    width: 100%;
+    height: 600px;
+    background: #fee;
+    display: flex;
+    align-items: center;
+    margin-top: var(--height-header);
+
+    background: url(img/header.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -100px center;
+
+    position: relative;
+    z-index: 5000;
+}
+
+.area-top-view > .wrapper {}
+
+.area-top-view p {
+    margin-bottom: 0px;
+}
+
+.title-top-view {
+    font-size: 4.0rem;
+    line-height: 1.6em;
+    text-shadow: rgba(255, 255, 255, 1) 0 0 20px;
+}
+
+.subtitle-top-view {
+    font-size: 30px;
+    line-height: 1.6em;
+}
+
+.subtitle-top-view span {
+    font-size: 2.4rem;
+    color: #333;
+}
+
+/* ----- DEMAND ----- */
+.area-demand {
+    min-height: 300px;
+    padding-top: 80px;
+    position: relative;
+    z-index: 1000;
+}
+
+.imgarea-demand,
+.imgarea-demand > * {
+    display: block;
+    width: 100%;
+}
+
+.imgarea-demand {
+    margin-bottom: 20px;
+}
+
+.img-demand {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.bg-arrow-object {
+    margin-top: -10px;
+    width: 100%;
+    background: url(img/arrow-object.png);
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.bg-arrow-object::before {
+    display: block;
+    content: "";
+    padding-top: 11.5%;
+}
+
+/* ----- ABOUT ----- */
+.area-about {
+    background: #DCDCDC;
+    padding: 120px 0;
+    position: relative;
+    z-index: 800;
+}
+
+.logo-m-vision {
+    width: 500px;
+    height: auto;
+    display: block;
+}
+
+.title-about {
+    display: block;
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    margin: 20px 0 40px 0;
+}
+
+.area-about .r-40 {
+    position: relative;
+}
+
+.img-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background: url(img/report-set.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.link-detail-about {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    height: 20px;
+}
+
+.link-detail-about span {
+    padding-left: 25px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    position: relative;
+}
+
+.link-detail-about span::before {
+    content: "";
+    display: inline-block;
+    background: url(img/虫眼鏡.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* ----- FEATURE ----- */
+.area-feature {
+    margin-top: -40px;
+    min-height: 100px;
+    box-shadow: rgba(0, 0, 0, .2) 0 0 20px;
+    position: relative;
+    z-index: 900;
+    background: #fff;
+    padding: 20px;
+    padding-top: 40px;
+    margin-bottom: -40px;
+}
+
+.box-feature-wide {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.box-feature-left {
+    padding: 20px 20px 0 0;
+    border-right: 1px solid #ccc;
+    width: 50%;
+}
+
+.box-feature-right {
+    padding: 20px 0 0 20px;
+    width: 50%;
+}
+
+[class^='subttl-feature'] {
+    margin: 11px 0 21px 25px;
+    padding-left: 25px;
+    height: 28px;
+    line-height: 28px;
+    background: var(--main-color);
+    color: #FFF;
+    position: relative;
+    font-size: 2.0rem;
+    border-radius: 14px;
+}
+
+[class^='subttl-feature']::before {
+    counter-increment: subttlnum;
+    content: counter(subttlnum);
+    color: #fff;
+    background: var(--main-color);
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    top: -11px;
+    right: calc(100% - 20px);
+    text-align: center;
+    line-height: 50px;
+    font-size: 2.0rem;
+}
+
+.subttl-feature-wide,
+.subttl-feature-wide::before {
+    background: var(--accent-color);
+}
+
+.subttl-feature-wide {
+    width: 50%;
+    margin: 11px auto 21px auto;
+    text-align: center;
+}
+
+.img-feature {
+    height: 300px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* ----- REPORT ----- */
+
+.area-report {
+    position: relative;
+    z-index: 800;
+    background: #DDD;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+div[class^="imgarea-report"] {
+    background: #fff;
+    background-image: url(img/report-img.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: rgba(0, 0, 0, .2) 0 0 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.imgarea-report-sp {
+    display: none;
+}
+
+
+
+
+
+/* ----- CONTACT ----- */
+.area-contact {
+    background: url(img/bg-shakehand.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+.area-contact > div {
+    margin: 80px auto;
+}
+
+.area-contact .btn-CTA {
+    width: calc(50% - 20px);
+    margin: 0;
+}
+
+.maillink-contact {
+    height: 80px;
+    line-height: 80px;
+    display: block;
+    text-align: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 2.0rem;
+}
+
+
+
+
+/*---------------------------------------------------------
+        フッター
+---------------------------------------------------------*/
+.footer {
+    background: #777;
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+}
