@@ -84,7 +84,7 @@ a {
     min-height: 48px;
     font-size: 2.0rem;
     line-height: 1.6em;
-    padding: 8px 4.0rem;
+    padding: 8px 3.0rem;
     width: fit-content;
     background: var(--main-color);
     color: #fff;
@@ -135,56 +135,93 @@ h4 {
     }
 }
 
+.quote {
+    $quote__textcolor:#555;
+    $quote__linkcolor:#555;
+    $quote__linkcolor--hover:#777;
+
+    &--split {
+        display:inline;
+        font-size:inherit;
+        line-height:inherit;
+        color:inherit;
+
+        &__sup {
+            font-size:70%;
+            vertical-align: super;
+            color:$quote__textcolor;
+        }
+
+        &__text {
+            font-size:90%;
+            line-height:1.6em;
+            color:$quote__textcolor;
+        }
+
+        &__cite > a {
+            text-decoration: underline;
+            color:$quote__linkcolor;
+
+            &:hover {
+                text-decoration: none;
+                color:$quote__linkcolor--hover;
+            }
+        }
+    }
+}
+
+
+
 
 @include mq(){
-.btn {
-    margin: 2.0rem 0;
-    display: block;
-    min-height: 48px;
-    font-size: 1.6rem;
-    line-height: 1.6em;
-    padding: 16px 4.0rem;
-    width: fit-content;
-    background: var(--main-color);
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
+    .btn {
+        margin: 2.0rem 0;
+        display: block;
+        min-height: 48px;
+        font-size: 1.6rem;
+        line-height: 1.6em;
+        padding: 16px 2.0rem;
+        width: fit-content;
+        background: var(--main-color);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
 
-    @include mq(){
-        width:100%;
+        @include mq(){
+            width:100%;
+        }
     }
-}
 
-p {
-    font-size: 1.6rem;
-    line-height: 1.6em;
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6em;
 
-    &:not(:first-of-type) {
+        &:not(:first-of-type) {
 
-        margin-top: 2.0rem;
+            margin-top: 2.0rem;
+        }
     }
-}
 
-h2 {
-    font-size: 2.4rem;
-    line-height: 1.3em;
-    font-weight: normal;
-}
+    h2 {
+        font-size: 2.4rem;
+        line-height: 1.3em;
+        font-weight: normal;
+    }
 
-h3 {
-    font-size: 2.2rem;
-    line-height: 1.4em;
-    color: var(--title-color);
-    font-weight: normal;
-    font-family: "Century Gothic", "Hiragino Kaku Gothic ProN",
-        "Hiragino Sans", 'Yu Gothic', 'YuGothic', Meiryo, sans-serif;
-}
+    h3 {
+        font-size: 2.2rem;
+        line-height: 1.4em;
+        color: var(--title-color);
+        font-weight: normal;
+        font-family: "Century Gothic", "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans", 'Yu Gothic', 'YuGothic', Meiryo, sans-serif;
+    }
 
-h4 {
-    font-size: 2.0rem;
-    line-height: 1.6em;
-    font-weight: normal;
-}
+    h4 {
+        font-size: 2.0rem;
+        line-height: 1.6em;
+        font-weight: normal;
+    }
 }
 
 /*---------- header ----------*/
@@ -342,6 +379,49 @@ h4 {
             transform: rotate(-45deg);
         }
     }
+}
+
+.scrolltop {
+    position:fixed;
+    display:none;
+    bottom:80px;left:0;right:0;
+    height:80px;
+    z-index:9999;
+
+    &__wrapper {
+        margin:0 auto;
+    }
+
+    $r:52px;
+    &__button {
+        position:relative;
+        margin:0 0 0 auto;
+        padding:0 20px 0 80px;
+        width:fit-content;
+        height:80px;
+        border-radius:40px;
+        line-height:80px;
+        background:var(--title-color);
+        color:#fff;
+        font-size:20px;
+        text-align:center;
+        box-shadow:0 0 30px rgba(0,0,0,.7);
+        cursor:pointer;
+    }
+
+    &__arrow {
+        position:absolute;left:calc(40px - #{$r} / 2);top:calc(40px - #{$r} / 2);
+        width:$r;
+        height:$r;
+        line-height:$r;
+        border-radius:calc( #{$r} / 2 );
+        font-size:20px;
+        color:var(--title-color);
+        background:linear-gradient(0deg,white,var(--base-color));
+        opacity:.8;
+    }
+
+
 }
 
 
@@ -862,6 +942,7 @@ h4 {
             font-size: 2.2rem;
             line-height: 1.6em;
             font-weight: normal;
+            text-align:center;
         }
 
         a {
@@ -938,7 +1019,6 @@ h4 {
                 font-size: 2.2rem;
                 line-height: 1.6em;
                 font-weight: normal;
-                text-align:center;
             }
 
             a {
@@ -1075,6 +1155,10 @@ h4 {
 
         &.article__2col--stretch {
             align-items: center;
+        }
+
+        a.btn {
+            margin:2rem auto;
         }
     }
 

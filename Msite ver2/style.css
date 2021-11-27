@@ -66,7 +66,7 @@ a:hover {
   min-height: 48px;
   font-size: 2.0rem;
   line-height: 1.6em;
-  padding: 8px 4.0rem;
+  padding: 8px 3.0rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -121,6 +121,35 @@ h4 {
   }
 }
 
+.quote--split {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.quote--split__sup {
+  font-size: 70%;
+  vertical-align: super;
+  color: #555;
+}
+
+.quote--split__text {
+  font-size: 90%;
+  line-height: 1.6em;
+  color: #555;
+}
+
+.quote--split__cite > a {
+  text-decoration: underline;
+  color: #555;
+}
+
+.quote--split__cite > a:hover {
+  text-decoration: none;
+  color: #777;
+}
+
 @media screen and (max-width: 960px) {
   .btn {
     margin: 2.0rem 0;
@@ -128,7 +157,7 @@ h4 {
     min-height: 48px;
     font-size: 1.6rem;
     line-height: 1.6em;
-    padding: 16px 4.0rem;
+    padding: 16px 2.0rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -351,6 +380,54 @@ h4 {
   }
 }
 
+.scrolltop {
+  position: fixed;
+  display: none;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 9999;
+}
+
+.scrolltop__wrapper {
+  margin: 0 auto;
+}
+
+.scrolltop__button {
+  position: relative;
+  margin: 0 0 0 auto;
+  padding: 0 20px 0 80px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 80px;
+  border-radius: 40px;
+  line-height: 80px;
+  background: var(--title-color);
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.scrolltop__arrow {
+  position: absolute;
+  left: calc(40px - 52px / 2);
+  top: calc(40px - 52px / 2);
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  border-radius: calc( 52px / 2);
+  font-size: 20px;
+  color: var(--title-color);
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(var(--base-color)));
+  background: linear-gradient(0deg, white, var(--base-color));
+  opacity: .8;
+}
+
 /*---------- main ----------*/
 .main {
   min-height: 100vh;
@@ -408,14 +485,6 @@ h4 {
 }
 
 @media screen and (max-width: 960px) {
-  .area-top--lg {
-    height: auto;
-    padding-bottom: 1px;
-  }
-  .area-top--lg .area-top__title {
-    min-height: 50vh;
-    height: auto;
-  }
   .area-top--sm {
     height: 400px;
   }
@@ -531,12 +600,11 @@ h4 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 2px 8px;
+    padding: 3px 12px;
     background: var(--base-color);
   }
   .top-news__title {
-    margin-top: 0;
-    padding: 10px 0;
+    margin-top: 1.0rem;
     width: 100%;
     font-size: 1.6rem;
   }
@@ -592,7 +660,7 @@ h4 {
 
 @media screen and (max-width: 960px) {
   .area-about {
-    padding-top: 40px;
+    padding-top: 120px;
   }
   .area-about__title {
     font-size: 3.2rem;
@@ -890,6 +958,7 @@ h4 {
   font-size: 2.2rem;
   line-height: 1.6em;
   font-weight: normal;
+  text-align: center;
 }
 
 .footer__linkarea a {
@@ -962,7 +1031,6 @@ h4 {
     font-size: 2.2rem;
     line-height: 1.6em;
     font-weight: normal;
-    text-align: center;
   }
   .footer__linkarea a {
     margin-top: 10px;
@@ -1104,6 +1172,10 @@ h4 {
           align-items: center;
 }
 
+.article__2col a.btn {
+  margin: 2rem auto;
+}
+
 @media screen and (max-width: 960px) {
   .article img {
     width: 100%;
@@ -1164,7 +1236,7 @@ h4 {
   }
   .article__block {
     margin-top: 60px;
-    padding: 40px 0;
+    padding: 40px 20px;
   }
   .article__block--white {
     margin-top: 60px;
