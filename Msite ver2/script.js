@@ -26,19 +26,19 @@ $(function () {
         return false;
     });
 
-    var $win = $(window),
-    $scrollTopLink = $('.scrolltop'),
-    WinHeight = $win.height(),
-    Class = 'is_visible';
+    var $win = $(window);
+    $scrollTopLink = $('.scrolltop');
+    WinHeight = $win.height();
+    //footerが描画される位置
+    FooterPosition = $('footer').offset().top - WinHeight;
 
     $win.on('load scroll', function () {
         var value = $(this).scrollTop();
-        if (value > WinHeight) {
+        //表示領域分スクロール後～footer描画までの間だけ「一番上に戻る」を表示
+        if (FooterPosition > value && value > WinHeight) {
             $scrollTopLink.fadeIn(400);
-            //$scrollTopLink.addClass(Class);
         } else {
             $scrollTopLink.fadeOut(400);
-            //$scrollTopLink.removeClass(Class);
         }
     });
 
