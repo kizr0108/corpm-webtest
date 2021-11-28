@@ -5,6 +5,7 @@ Version: 1.0
 */
 :root {
   --main-color: #17BAFF;
+  --main-color-hover: #47CAFF;
   --title-color: #2C6E8A;
   --base-color: #E1F1F7;
   --accent-color: #ff9200;
@@ -74,6 +75,12 @@ a:hover {
   color: #fff;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  background: var(--main-color-hover);
 }
 
 @media screen and (max-width: 960px) {
@@ -118,6 +125,16 @@ h4 {
 @media screen and (max-width: 960px) {
   .br__sp {
     display: inline;
+  }
+}
+
+.br__pc {
+  display: inline;
+}
+
+@media screen and (max-width: 960px) {
+  .br__pc {
+    display: none;
   }
 }
 
@@ -223,6 +240,37 @@ h4 {
   line-height: 80px;
 }
 
+.header a:not(.header-nav__MtoB) {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.header a:not(.header-nav__MtoB):hover {
+  color: var(--main-color);
+}
+
+.header a:not(.header-nav__MtoB)::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0%;
+  border-bottom: 2px solid var(--main-color);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.header a:not(.header-nav__MtoB):hover::before {
+  width: 100%;
+}
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,15 +289,6 @@ h4 {
 .header--left h1 {
   font-size: 2.0rem;
   font-weight: normal;
-}
-
-.header--left h1 a {
-  text-decoration: none;
-  color: #000;
-}
-
-.header--left h1 a:hover {
-  text-decoration: underline;
 }
 
 .header-nav {
@@ -278,13 +317,7 @@ h4 {
 }
 
 .header-nav__list a {
-  padding: 0 20px;
-  text-decoration: none;
-  color: #000;
-}
-
-.header-nav__list a:hover {
-  background: #eee;
+  margin: 0 20px;
 }
 
 .header-nav__MtoB {
@@ -855,9 +888,20 @@ h4 {
   padding: 80px 0;
 }
 
+.area-company__wrapper {
+  height: 320px;
+  position: relative;
+}
+
 .area-company a {
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
   opacity: .7;
   display: block;
   height: 160px;
@@ -1176,6 +1220,14 @@ h4 {
   margin: 2rem auto;
 }
 
+.article__img--inline {
+  display: inline;
+  width: 300px !important;
+  height: 400px !important;
+  float: right;
+  margin-left: 40px;
+}
+
 @media screen and (max-width: 960px) {
   .article img {
     width: 100%;
@@ -1270,6 +1322,68 @@ h4 {
         -ms-flex-order: 2;
             order: 2;
   }
+}
+
+/*---------- SERVICE ----------*/
+.supportlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.supportlist__head {
+  display: block;
+  width: calc( (100% - 30px) / 4);
+  position: relative;
+  background: var(--title-color);
+}
+
+.supportlist__head span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.supportlist__items {
+  width: calc( (100% - 30px) * 3 / 4 + 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 10px 10px;
+}
+
+.supportlist__items a {
+  display: block;
+  width: calc( (100% - 20px) / 3);
+  line-height: 1.6em;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 20px 0;
+  background: var(--base-color);
 }
 
 /*---------- COMPANY ----------*/
