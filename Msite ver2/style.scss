@@ -18,7 +18,7 @@ Version: 1.0
 
 $breakpoints: ('sp': 'screen and (max-width:960px)',
     'pc': 'screen and (min-width:961px)',
-    'md': 'screen and (min-width:961px) and (max-width:1200)',
+    'md': 'screen and (min-width:961px) and (max-width:1200px)',
     'lg': 'screen and (min-width:1201px)',
 ) !default;
 
@@ -50,8 +50,8 @@ $breakpoints: ('sp': 'screen and (max-width:960px)',
         width: 1200px;
     }
 
-    @include mq(pc) {
-        width: 960px;
+    @include mq(md) {
+        width: 1200px;
     }
 
     @include mq(sp) {
@@ -575,6 +575,10 @@ h4 {
         background-position: center center;
     }
 
+    @include mq(md) {
+
+    }
+
     @include mq(){
         &__wrapper {
             display: block;
@@ -637,11 +641,11 @@ h4 {
         }
 
         &__imgarea--aboutus {
-            width: calc(100% - 40px);
+            width: calc(100% - 20px);
             background: url("img/susumu_mori_square.jpg");
             background-size: cover;
             background-position: center center;
-            margin:0 20px 40px 20px;
+            margin:0 10px 40px 10px;
             height:auto;
 
             &::before {
@@ -809,6 +813,12 @@ h4 {
         width: 40%;
         position: relative;
         padding-left: 20px;
+
+        img {
+            display:block;margin:0 auto;
+            height:72px;width:60px;
+            margin-bottom:10px;
+        }
 
         div {
             width: 100%;

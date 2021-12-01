@@ -266,9 +266,9 @@ textarea:focus {
   }
 }
 
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 961px) and (max-width: 1200px) {
   *[class*="wrapper"] {
-    width: 960px;
+    width: 1200px;
   }
 }
 
@@ -564,8 +564,27 @@ h4 {
 }
 
 .header--left h1 {
-  font-size: 2.0rem;
+  font-size: 2.4rem;
   font-weight: normal;
+  position: relative;
+}
+
+.header--left h1::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 48px;
+  width: 40px;
+  top: calc((80px - 48px) / 2);
+  left: 0px;
+  background: url(img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.header--left h1 a {
+  padding-left: calc(48px + .2em);
 }
 
 .header-nav {
@@ -594,7 +613,7 @@ h4 {
 }
 
 .header-nav__list a {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .header-nav__MtoB {
@@ -1137,11 +1156,11 @@ h4 {
     margin-top: 2.0rem;
   }
   .area-panel__imgarea--aboutus {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     background: url("img/susumu_mori_square.jpg");
     background-size: cover;
     background-position: center center;
-    margin: 0 20px 40px 20px;
+    margin: 0 10px 40px 10px;
     height: auto;
   }
   .area-panel__imgarea--aboutus::before {
@@ -1308,6 +1327,14 @@ h4 {
   width: 40%;
   position: relative;
   padding-left: 20px;
+}
+
+.footer__copyright img {
+  display: block;
+  margin: 0 auto;
+  height: 72px;
+  width: 60px;
+  margin-bottom: 10px;
 }
 
 .footer__copyright div {
