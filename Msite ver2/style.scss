@@ -29,6 +29,12 @@ $breakpoints: ('sp': 'screen and (max-width:960px)',
 }
 
 
+
+@import 'scss/_form.scss';
+
+
+
+
 :root {
     --main-color: #17BAFF;
     --main-color-hover: #47CAFF;
@@ -95,6 +101,7 @@ a {
     text-align: center;
     text-decoration: none;
     transition:all 0.2s ease-out;
+    border:none;
 
     &:hover {
         background:var(--main-color-hover);
