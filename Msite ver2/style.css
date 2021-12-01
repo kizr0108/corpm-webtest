@@ -30,7 +30,7 @@ Version: 1.0
 @media screen and (max-width: 960px) {
   *[class*="wrapper"] {
     width: auto;
-    margin: 0 20px !important;
+    margin: 0 10px !important;
   }
 }
 
@@ -651,7 +651,7 @@ h4 {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     font-size: 1.4rem;
   }
   .top-news__info {
@@ -859,7 +859,7 @@ h4 {
   .area-panel__textarea {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 30px 10px;
     position: relative;
   }
   .area-panel__textarea h3 span {
@@ -1329,11 +1329,11 @@ h4 {
   }
   .article__block {
     margin-top: 60px;
-    padding: 40px 20px;
+    padding: 30px 0px;
   }
   .article__block--white {
     margin-top: 60px;
-    padding: 40px 20px;
+    padding: 30px 10px;
     background: #fff;
   }
   .article__paragraph {

@@ -50,7 +50,7 @@ $breakpoints: ('sp': 'screen and (max-width:960px)',
 
     @include mq(sp) {
         width: auto;
-        margin: 0 20px!important;
+        margin: 0 10px!important;
     }
 }
 
@@ -403,7 +403,7 @@ h4 {
             width:100%;
             font-weight: bold;
             text-align:center;
-            margin:10px 0;
+            margin:0 0 10px 0;
             font-size: 1.4rem;
         }
 
@@ -592,7 +592,7 @@ h4 {
         &__textarea {
             width: 100%;
             height:auto;
-            padding: 20px;
+            padding: 30px 10px;
             position: relative;
 
             h3 span {
@@ -1081,12 +1081,12 @@ h4 {
 
         &__block {
             margin-top: 60px;
-            padding: 40px 20px;
+            padding: 30px 0px;
         }
 
         &__block--white {
             margin-top: 60px;
-            padding: 40px 20px;
+            padding: 30px 10px;
             background: #fff;
         }
 
